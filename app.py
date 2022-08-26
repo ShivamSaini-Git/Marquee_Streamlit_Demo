@@ -20,5 +20,5 @@ st.dataframe(df)
 # Filter the table for those selections
 sectors = df['Industry'].unique() # remove duplicates
 pickedSectors = st.multiselect('Pick a sector', sectors)
-df_filtered = df[['Industry'].isin(pickedSectors)]
+df_filtered = df[df['Industry'].isin(pickedSectors)]
 st.write(df_filtered)
